@@ -1,4 +1,4 @@
-package com.example.recyclerviewtutorialandcardviewtutorialusingkotlin
+package com.example.recyclerviewtutorialandcardviewtutorialusingkotlin.modelClass
 
 class Hobby(var title: String) {
 

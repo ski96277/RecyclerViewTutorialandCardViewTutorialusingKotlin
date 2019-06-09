@@ -1,4 +1,4 @@
-package com.example.recyclerviewtutorialandcardviewtutorialusingkotlin
+package com.example.recyclerviewtutorialandcardviewtutorialusingkotlin.Adapters
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,6 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.example.recyclerviewtutorialandcardviewtutorialusingkotlin.Extensions.showToast
+import com.example.recyclerviewtutorialandcardviewtutorialusingkotlin.modelClass.Hobby
+import com.example.recyclerviewtutorialandcardviewtutorialusingkotlin.R
 import kotlinx.android.synthetic.main.item_recyclerview.view.*
 
 class HobbiesAdapter(val context: Context, val hobbies: List<Hobby>) :
@@ -43,11 +46,7 @@ class HobbiesAdapter(val context: Context, val hobbies: List<Hobby>) :
 
         init {
             itemview.setOnClickListener {
-                Toast.makeText(
-                    context,
-                    current_hobbies!!.title + " clicked position " + current_position,
-                    Toast.LENGTH_SHORT
-                ).show();
+                context.showToast(current_hobbies!!.title + " clicked position " + current_position);
             }
         }
 

@@ -1,9 +1,12 @@
-package com.example.recyclerviewtutorialandcardviewtutorialusingkotlin
+package com.example.recyclerviewtutorialandcardviewtutorialusingkotlin.Activityes
 
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.recyclerviewtutorialandcardviewtutorialusingkotlin.Adapters.HobbiesAdapter
+import com.example.recyclerviewtutorialandcardviewtutorialusingkotlin.modelClass.Hobby
+import com.example.recyclerviewtutorialandcardviewtutorialusingkotlin.R
 import kotlinx.android.synthetic.main.activity_recycler_view.*
 
 class RecyclerView_Activity : AppCompatActivity() {
@@ -17,7 +20,10 @@ class RecyclerView_Activity : AppCompatActivity() {
         linearLayoutManager.orientation = LinearLayoutManager.VERTICAL
         recyclerView_ID.layoutManager=linearLayoutManager
 
-        val adapter=HobbiesAdapter(this, Hobby.Supplier.hobbies)
+        val adapter= HobbiesAdapter(
+            this,
+            Hobby.Supplier.hobbies
+        )
         recyclerView_ID.adapter=adapter
     }
 }
